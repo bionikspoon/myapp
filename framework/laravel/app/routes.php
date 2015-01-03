@@ -25,7 +25,7 @@ Route::post('userform', function()
 		'email' => 'required|email|different:username',
 		'username' => 'required|min:6',
 		'password' => 'required|same:password_confirm'
-	);
+		);
 	$validation = Validator::make(Input::all(), $rules);
 	if ($validation->fails())
 	{
@@ -71,7 +71,7 @@ Route::post('myform', array( 'before' => 'csrf', function(){
 		);
 	$messages = array(
 		'honey_pot' => 'Nothing should be in this field.'
-	 	);
+		);
 	$validation = Validator::make(Input::all(), $rules, $messages);
 	if ($validation->fails()) {
 		return Redirect::to('myform')->withErrors($validation)->withInput();
@@ -86,7 +86,8 @@ Route::get('redactor', function()
 {
 	return View::make('redactor');
 });
-Route::post('redactorupload', function(){
+Route::post('redactorupload', function()
+{
 	$rules = array(
 		'file' => 'image|max:10000'
 		);
@@ -110,6 +111,46 @@ Route::post('redactorupload', function(){
 
 });
 Route::post('redactor', function()
+{
+	return dd(Input::all());
+});
+Route::get('imageform', function()
+{
+	return View::make('imageform');
+});
+Route::post('imageform', function()
 	{
-		return dd(Input::all());
+		$rules = array(
+			'image' => 'required|mimes:jpeg,jpg|max:10000'
+			);
+		$validation = Validator::make(Input::all(), $rules);
+
+		if ($validation->fails()) {
+			return Redirect::to('imageform')->withErrors($validation);
+		}
+		else {
+			$file = Input::file('image');
+			$file_name = $file->getClientOriginalName();
+			if ($file->move('images', $file_name)) {
+				return Redirect::to('jcrop')->with('image', $file_name);
+			} else {
+				return "Error uploading file";
+			}
+			
+		}
 	});
+Route::get('jcrop', function()
+	{
+		return View::make('jcrop')->with('image', 'images/' . Session::get('image'));
+	});
+Route::post('jcrop', function()
+{
+	$quality = 90;
+	$src = Input::get('image');
+	$img = imagecreatefromjpeg($src);
+	$dest = imagecreatetruecolor(Input::get('w'), Input::get('h'));
+
+	imagecopyresampled($dest, $img, 0, 0, Input::get('x'), Input::get('y'), Input::get('w'), Input::get('h'), Input::get('w'), Input::get('h'));
+	imagejpeg($dest, $src, $quality);
+	return "<img src='$src' >";
+});

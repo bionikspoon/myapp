@@ -15,11 +15,6 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-Route::get('shape', function()
-{
-	$shape = new Custom\Shapes\MyShapes;
-	return $shape->triangle();
-});
 Route::get('userform', function()
 {
 	return View::make('userform');

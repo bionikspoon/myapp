@@ -1,0 +1,450 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"In",
+				"Input-old	Input-old"
+			],
+			[
+				"Rou",
+				"Route-get	Route-get"
+			],
+			[
+				"arra",
+				"array	$… = array (…)"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"Route",
+				"Route-get	Route-get"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"wit",
+				"withInput"
+			],
+			[
+				"with",
+				"withErrors"
+			],
+			[
+				"Inp",
+				"Input-all	Input-all"
+			],
+			[
+				"Val",
+				"Validator-make	Validator-make"
+			],
+			[
+				"ech",
+				"echo"
+			],
+			[
+				"mes",
+				"messages"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"V",
+				"View-make	View-make"
+			],
+			[
+				"Red",
+				"Redirect-to	Redirect-to"
+			],
+			[
+				"pass",
+				"password"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/routes.php",
+			"settings":
+			{
+				"buffer_size": 2236,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/lang/en/reminders.php",
+			"settings":
+			{
+				"buffer_size": 729,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nreturn array(\n\n	/*\n	|--------------------------------------------------------------------------\n	| Validation Language Lines\n	|--------------------------------------------------------------------------\n	|\n	| The following language lines contain the default error messages used by\n	| the validator class. Some of these rules have multiple versions such\n	| as the size rules. Feel free to tweak each of these messages here.\n	|\n	*/\n\n	\"accepted\"             => \"The :attribute must be accepted.\",\n	\"active_url\"           => \"The :attribute is not a valid URL.\",\n	\"after\"                => \"The :attribute must be a date after :date.\",\n	\"alpha\"                => \"The :attribute may only contain letters.\",\n	\"alpha_dash\"           => \"The :attribute may only contain letters, numbers, and dashes.\",\n	\"alpha_num\"            => \"The :attribute may only contain letters and numbers.\",\n	\"array\"                => \"The :attribute must be an array.\",\n	\"before\"               => \"The :attribute must be a date before :date.\",\n	\"between\"              => array(\n		\"numeric\" => \"The :attribute must be between :min and :max.\",\n		\"file\"    => \"The :attribute must be between :min and :max kilobytes.\",\n		\"string\"  => \"The :attribute must be between :min and :max characters.\",\n		\"array\"   => \"The :attribute must have between :min and :max items.\",\n	),\n	\"boolean\"              => \"The :attribute field must be true or false.\",\n	\"confirmed\"            => \"The :attribute confirmation does not match.\",\n	\"date\"                 => \"The :attribute is not a valid date.\",\n	\"date_format\"          => \"The :attribute does not match the format :format.\",\n	\"different\"            => \"The :attribute and :other must be different.\",\n	\"digits\"               => \"The :attribute must be :digits digits.\",\n	\"digits_between\"       => \"The :attribute must be between :min and :max digits.\",\n	\"email\"                => \"The :attribute must be a valid email address.\",\n	\"exists\"               => \"The selected :attribute is invalid.\",\n	\"image\"                => \"The :attribute must be an image.\",\n	\"in\"                   => \"The selected :attribute is invalid.\",\n	\"integer\"              => \"The :attribute must be an integer.\",\n	\"ip\"                   => \"The :attribute must be a valid IP address.\",\n	\"max\"                  => array(\n		\"numeric\" => \"The :attribute may not be greater than :max.\",\n		\"file\"    => \"The :attribute may not be greater than :max kilobytes.\",\n		\"string\"  => \"The :attribute may not be greater than :max characters.\",\n		\"array\"   => \"The :attribute may not have more than :max items.\",\n	),\n	\"mimes\"                => \"The :attribute must be a file of type: :values.\",\n	\"min\"                  => array(\n		\"numeric\" => \"The :attribute must be at least :min.\",\n		\"file\"    => \"The :attribute must be at least :min kilobytes.\",\n		\"string\"  => \"The :attribute must be at least :min characters.\",\n		\"array\"   => \"The :attribute must have at least :min items.\",\n	),\n	\"not_in\"               => \"The selected :attribute is invalid.\",\n	\"numeric\"              => \"The :attribute must be a number.\",\n	\"regex\"                => \"The :attribute format is invalid.\",\n	\"required\"             => \"The :attribute field is required.\",\n	\"required_if\"          => \"The :attribute field is required when :other is :value.\",\n	\"required_with\"        => \"The :attribute field is required when :values is present.\",\n	\"required_with_all\"    => \"The :attribute field is required when :values is present.\",\n	\"required_without\"     => \"The :attribute field is required when :values is not present.\",\n	\"required_without_all\" => \"The :attribute field is required when none of :values are present.\",\n	\"same\"                 => \"The :attribute and :other must match.\",\n	\"size\"                 => array(\n		\"numeric\" => \"The :attribute must be :size.\",\n		\"file\"    => \"The :attribute must be :size kilobytes.\",\n		\"string\"  => \"The :attribute must be :size characters.\",\n		\"array\"   => \"The :attribute must contain :size items.\",\n	),\n	\"unique\"               => \"The :attribute has already been taken.\",\n	\"url\"                  => \"The :attribute format is invalid.\",\n	\"timezone\"             => \"The :attribute must be a valid zone.\",\n\n	/*\n	|--------------------------------------------------------------------------\n	| Custom Validation Language Lines\n	|--------------------------------------------------------------------------\n	|\n	| Here you may specify custom validation messages for attributes using the\n	| convention \"attribute.rule\" to name the lines. This makes it quick to\n	| specify a specific custom language line for a given attribute rule.\n	|\n	*/\n\n	'custom' => array(\n		'attribute-name' => array(\n			'rule-name' => 'custom-message',\n		),\n	),\n\n	/*\n	|--------------------------------------------------------------------------\n	| Custom Validation Attributes\n	|--------------------------------------------------------------------------\n	|\n	| The following language lines are used to swap attribute place-holders\n	| with something more reader friendly such as E-Mail Address instead\n	| of \"email\". This simply helps us make messages a little cleaner.\n	|\n	*/\n\n	'attributes' => array(),\n\n);\n",
+			"file": "app/lang/en/validation.php",
+			"file_size": 5321,
+			"file_write_time": 130647190726236249,
+			"settings":
+			{
+				"buffer_size": 5160,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/myform.php",
+			"settings":
+			{
+				"buffer_size": 488,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/fileform.php",
+			"settings":
+			{
+				"buffer_size": 333,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 228.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/myapp/framework/laravel",
+		"/C/xampp/htdocs/myapp/framework/laravel/app",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/Custom",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/Custom/Shapes",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/lang",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/lang/en",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views",
+		"/C/xampp/htdocs/myapp/framework/laravel/public"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/hello.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/userform.php",
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/routes.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/start/global.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/Custom/Shapes/MyShapes.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/MyShapes.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/composer.json",
+		"/C/xampp/htdocs/myapp/framework/laravel/myapp.sublime-project",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/config/database.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/config/app.php",
+		"/C/xampp/htdocs/myapp/public/index.php",
+		"/C/xampp/htdocs/myapp/.htaccess",
+		"/C/xampp/htdocs/myapp/public/.htaccess",
+		"/C/xampp/htdocs/myapp/laravel/public/index.php"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1624,
+								1624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 655.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/lang/en/reminders.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/lang/en/validation.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5153,
+								5153
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/myform.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								488,
+								488
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/fileform.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "myapp.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 205.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

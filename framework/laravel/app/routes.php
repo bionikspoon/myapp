@@ -119,30 +119,30 @@ Route::get('imageform', function()
 	return View::make('imageform');
 });
 Route::post('imageform', function()
-	{
-		$rules = array(
-			'image' => 'required|mimes:jpeg,jpg|max:10000'
-			);
-		$validation = Validator::make(Input::all(), $rules);
+{
+	$rules = array(
+		'image' => 'required|mimes:jpeg,jpg|max:10000'
+		);
+	$validation = Validator::make(Input::all(), $rules);
 
-		if ($validation->fails()) {
-			return Redirect::to('imageform')->withErrors($validation);
+	if ($validation->fails()) {
+		return Redirect::to('imageform')->withErrors($validation);
+	}
+	else {
+		$file = Input::file('image');
+		$file_name = $file->getClientOriginalName();
+		if ($file->move('images', $file_name)) {
+			return Redirect::to('jcrop')->with('image', $file_name);
+		} else {
+			return "Error uploading file";
 		}
-		else {
-			$file = Input::file('image');
-			$file_name = $file->getClientOriginalName();
-			if ($file->move('images', $file_name)) {
-				return Redirect::to('jcrop')->with('image', $file_name);
-			} else {
-				return "Error uploading file";
-			}
-			
-		}
-	});
+
+	}
+});
 Route::get('jcrop', function()
-	{
-		return View::make('jcrop')->with('image', 'images/' . Session::get('image'));
-	});
+{
+	return View::make('jcrop')->with('image', 'images/' . Session::get('image'));
+});
 Route::post('jcrop', function()
 {
 	$quality = 90;
@@ -153,4 +153,30 @@ Route::post('jcrop', function()
 	imagecopyresampled($dest, $img, 0, 0, Input::get('x'), Input::get('y'), Input::get('w'), Input::get('h'), Input::get('w'), Input::get('h'));
 	imagejpeg($dest, $src, $quality);
 	return "<img src='$src' >";
+});
+Route::get('autocomplete', function()
+{
+	return View::make('autocomplete');
+});
+Route::get('getdata', function()
+{
+	$term = Str::lower(Input::get('term'));
+	$data = array(
+		'R' => 'Red', 
+		'O' => 'Orange', 
+		'Y' => 'Yellow', 
+		'G' => 'Green', 
+		'B' => 'Blue', 
+		'I' => 'Indigo', 
+		'V' => 'Violet', 
+		);
+	$return_array = array();
+	foreach ($data as $key => $value) {
+		if (strpos(Str::lower($value), $term) !== FALSE) {
+			$return_array[] = array(
+				'value' => $value, 
+				'id' => $key);
+		}
+	}
+	return Response::json($return_array);
 });

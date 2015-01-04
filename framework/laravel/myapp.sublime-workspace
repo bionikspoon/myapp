@@ -4,16 +4,76 @@
 		"selected_items":
 		[
 			[
+				"Sess",
+				"Session-flash	Session-flash"
+			],
+			[
+				"if",
+				"ifelse	if … else …"
+			],
+			[
+				"ca",
+				"captcha"
+			],
+			[
+				"bas",
+				"base64_encode"
+			],
+			[
+				"S",
+				"Session-put	Session-put"
+			],
+			[
+				"return",
+				"return_array"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"a",
+				"array	$… = array (…)"
+			],
+			[
+				"Inp",
+				"Input-get	Input-get"
+			],
+			[
+				"Form-o",
+				"Form-open	Form-open"
+			],
+			[
+				"fil",
+				"file_name"
+			],
+			[
+				"Inpu",
+				"Input-file	Input-file"
+			],
+			[
+				"Rou",
+				"Route-post	Route-post"
+			],
+			[
+				"Form",
+				"Form-file	Form-file"
+			],
+			[
+				"For",
+				"Form-label	Form-label"
+			],
+			[
+				"R",
+				"Route-get	Route-get"
+			],
+			[
 				"In",
 				"Input-all	Input-all"
 			],
 			[
 				"Res",
 				"Response-json	Response-json"
-			],
-			[
-				"R",
-				"Route-post	Route-post"
 			],
 			[
 				"array",
@@ -30,14 +90,6 @@
 			[
 				"F",
 				"Form-text	Form-text"
-			],
-			[
-				"Rou",
-				"Route-get	Route-get"
-			],
-			[
-				"arra",
-				"array	$… = array (…)"
 			],
 			[
 				"em",
@@ -62,10 +114,6 @@
 			[
 				"with",
 				"withErrors"
-			],
-			[
-				"Inp",
-				"Input-all	Input-all"
 			],
 			[
 				"Val",
@@ -100,18 +148,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/routes.php",
+			"file": "composer.json",
 			"settings":
 			{
-				"buffer_size": 2766,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/redactor.php",
-			"settings":
-			{
-				"buffer_size": 624,
+				"buffer_size": 781,
 				"line_ending": "Windows"
 			}
 		}
@@ -122,6 +162,10 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
 			[
 				"packa",
 				"Package Control: Install Package"
@@ -135,7 +179,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 400.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -157,29 +201,33 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/myapp/framework/laravel",
-		"/C/xampp/htdocs/myapp/framework/laravel/app",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/lang",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/views",
-		"/C/xampp/htdocs/myapp/framework/laravel/public"
+		"/C/xampp/htdocs/myapp/framework/laravel/app"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/myapp/framework/laravel/app/libraries/Captcha.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/composer.json",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/captcha.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/routes.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/autocomplete.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/start/global.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/lang/en/validation.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/imageform.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/jcrop.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/jcrop",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/config/app.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/redactor.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/fileform.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/myform.php",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/routes.php",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/lang/en/validation.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/hello.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/userform.php",
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/start/global.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/Custom/Shapes/MyShapes.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/MyShapes.php",
-		"/C/xampp/htdocs/myapp/framework/laravel/composer.json",
 		"/C/xampp/htdocs/myapp/framework/laravel/myapp.sublime-project",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/config/database.php",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/config/app.php",
 		"/C/xampp/htdocs/myapp/public/index.php",
 		"/C/xampp/htdocs/myapp/.htaccess",
 		"/C/xampp/htdocs/myapp/public/.htaccess",
@@ -187,7 +235,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -201,6 +249,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"br",
+			"<?= ?>",
+			"?>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -223,59 +274,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/routes.php",
+					"file": "composer.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2766,
+						"buffer_size": 781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2760,
-								2760
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 969.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/redactor.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 624,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								370,
-								370
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -283,7 +306,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -319,7 +342,7 @@
 	"project": "myapp.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":

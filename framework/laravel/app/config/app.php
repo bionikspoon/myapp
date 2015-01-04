@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://myapp.dev',
+	'url' => 'http://localhost',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'n95IPfyi7ZH1X53Z8ekfjpUZdCWG6wzz',
+	'key' => 'A9uoUBpgWaGiR2rW6tgtwC0yHD9UAIJ2',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 

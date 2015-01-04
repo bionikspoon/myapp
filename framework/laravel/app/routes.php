@@ -45,9 +45,9 @@ Route::post('registration', array('before' => 'csrf', function()
 Route::get('profile', function()
 {
 	if (Auth::check()) {
-		return "Welcome! you have been authorized";
+		return View::make('profile')->with('user', Auth::user());
 	} else {
-		return 'Pleasee <a href="login">Login</a>';
+		return Redirect::to('login')->with('login_error', 'You must login first.');
 	}
 	
 });
@@ -71,3 +71,34 @@ Route::get('secured', array('before' => 'auth', function()
 {
 	return 'This is a second page!';
 }));
+Route::get('profile-edit', function()
+{
+	if (Auth::check()) {
+		$user = Input::old() ? (object) Input::old() : Auth::user();
+		return View::make('profile-edit')->with('user', $user);
+	}
+});
+Route::post('profile-edit', function()
+{
+	$rules = array(
+		'email' 	=> 'required|email',
+		'password' 	=> 'same:password_confirm', 
+		'name' 		=> 'required'
+		);
+	$validation = Validator::make(Input::all(), $rules);
+
+	if ($validation->fails()) {
+		return Redirect::to('profile-edit')->withErrors($validation)->withInput();
+	}
+
+	$user = User::find(Auth::user()->id);
+	$user->email = Input::get('email');
+	if (Input::get('password')) {
+		$user->password = Hash::make(Input::get('password'));
+	}
+	$user->name = Input::get('name');
+	if ($user->save()){
+		return Redirect::to('profile')->with('notify', 'Information Updated');
+	}
+	return Redirect::to('profile-edit')->withInput();
+});

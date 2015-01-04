@@ -1,9 +1,8 @@
 <h2>Edit User Info</h2>
 <?php $messages = $errors->all('<p style="color:red">:message</p>') ?>
 <?php foreach ($messages as $msg){
-		echo $msg;
-	}
-?>
+	echo $msg;
+}?>
 <?= Form::open() ?>
 <?= Form::label('email', 'Email address: ') ?>
 <?= Form::text('email', $user->email) ?>

@@ -102,3 +102,11 @@ Route::post('profile-edit', function()
 	}
 	return Redirect::to('profile-edit')->withInput();
 });
+Route::get('restricted', array('before' => 'auth', function()
+{
+	return 'This page is restricted to logged-in users! <a href="admin">Admins Click here.</a>';
+}));
+Route::get('admin', array('before' => 'auth_admin', function()
+{
+	return 'This page is restricted to Admins only!';
+}));

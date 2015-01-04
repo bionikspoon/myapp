@@ -53,6 +53,7 @@ Route::get('profile', function()
 });
 Route::get('login', function()
 {
+	return Redirect::to('openid-login');
 	return View::make('login');
 });
 Route::post('login', function(){
@@ -110,3 +111,30 @@ Route::get('admin', array('before' => 'auth_admin', function()
 {
 	return 'This page is restricted to Admins only!';
 }));
+
+Route::get('openid-login', function()
+{
+	return View::make('openid-login');
+});
+Route::any('openid/{auth?}', function($auth = NULL)
+{
+	if ($auth == 'auth') {
+		try {
+			Hybrid_Endpoint::process();
+		} catch (Exception $e) {
+			return Redirect::to('openid');
+		}
+		return;
+	}
+	try {
+		$oauth = new Hybrid_Auth(app_path() . '/config/openid_auth.php');
+		$provider = $oauth->authenticate('OpenID', array('openid_identifier' => Input::get('openid_identity')));
+		$profile = $provider->getUserProfile();
+	} catch (Exception $e) {
+		return $e->getMessage();
+	}
+	echo "Welcome $profile->firstName $profile->lastName <br>";
+	echo "Your email: $profile->email <br>";
+	dd($profile);
+	//https://www.google.com/accounts/o8/id
+});

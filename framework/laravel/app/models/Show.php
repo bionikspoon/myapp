@@ -3,8 +3,7 @@ class Show
 {
 	public function allShows($order_by = FALSE, $direction = 'ASC')
 	{
-		$sql = 'SELECT * FROM shows';
-		$sql .= $order_by ? ' ORDER BY ' . $order_by . ' ' . $direction : '';
-		return DB::select($sql);
+		$shows = DB::table('shows');
+		return $order_by ? $shows->orderBy($order_by, $direction)->get() : $shows->get();
 	}
 }

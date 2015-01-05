@@ -162,3 +162,55 @@ Route::get('fbauth/{auth?}', function($auth = NULL){
 	echo "Your email: $profile->email <br>";
 	dd($profile);
 });
+Route::get('twitter', function()
+{
+	return "<a href='tw_auth'>Login with Twitter</a>";
+});
+Route::get('tw_auth/{auth?}', function($auth = NULL)
+{
+	if ($auth == 'auth') {
+		try {
+			Hybrid_Endpoint::process();
+		} catch (Exception $e) {
+			return Redirect::to('tw_auth');
+		}
+		return;
+	}
+	try {
+		$oauth = new Hybrid_Auth(app_path() . '/config/tw_auth.php');
+		$provider = $oauth->authenticate('Twitter');
+		$profile = $provider->getUserProfile();
+	} catch (Exception $e) {
+		return $e->getMessage();
+	}
+	echo "Welcome $profile->displayName <br>";
+	echo "Your image: <br><img src='$profile->photoURL'/> <br>";
+	dd($profile);
+});
+Route::get('linkedin', function()
+{
+	return "<a href='li_auth'>Login with LinkedIn</a>";
+});
+Route::get('li_auth/{auth?}', function($auth=NULL)
+{
+	if ($auth =='auth')
+	{
+		try {
+			Hybrid_Endpoint::process();
+		} catch (Exception $e) {
+			Redirect::to('li_auth');
+		}
+		return;
+	}
+	try {
+		$oauth = new Hybrid_Auth(app_path() . '/config/li_auth.php');
+		$provider = $oauth->authenticate('LinkedIn');
+		$profile = $provider->getUserProfile();
+	} catch (Exception $e) {
+		return $e->getMessage();
+	}
+	echo "Welcome $profile->firstName $profile->lastName <br>";
+	echo "Your email: $profile->email <br>";
+	echo "Your image: <br><img src='$profile->photoURL'/> <br>";
+	dd($profile);
+});

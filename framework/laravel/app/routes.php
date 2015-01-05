@@ -29,3 +29,19 @@ Route::get('shows', function()
 		echo "$show->name - $show->rating - $show->actor <br>";
 	}
 });
+Route::get('user', function()
+{
+	$user = new User();
+	$input = array();
+
+	$input['email'] = 'user@myapp.dev';
+	$input['username'] = 'user';
+	$valid = $user->validate($input);
+	if ($valid->passes()) {
+		echo 'Everything is valid!';
+	}
+	else 
+	{
+		var_dump($valid->messages());
+	}
+});

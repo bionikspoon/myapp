@@ -15,3 +15,9 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('shows', function()
+{
+	$shows = new Show();
+	$shows_by_rating = $shows->allShows('rating', 'DESC');
+	dd($shows_by_rating);
+});

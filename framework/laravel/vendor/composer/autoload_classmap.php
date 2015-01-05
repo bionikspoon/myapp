@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddActorToShowsTable' => $baseDir . '/app/database/migrations/2015_01_05_191517_add_actor_to_shows_table.php',
+    'AddDataToShowsTable' => $baseDir . '/app/database/migrations/2015_01_05_192236_add_data_to_shows_table.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',

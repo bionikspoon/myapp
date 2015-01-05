@@ -138,3 +138,27 @@ Route::any('openid/{auth?}', function($auth = NULL)
 	dd($profile);
 	//https://www.google.com/accounts/o8/id
 });
+Route::get('facebook', function()
+{
+	return "<a href='fbauth'>Login with Facebook</a>";
+});
+Route::get('fbauth/{auth?}', function($auth = NULL){
+	if ($auth == 'auth') {
+		try {
+			Hybrid_Endpoint::process();
+		} catch (Exception $e) {
+			return Redirect::to('fbauth');
+		}
+		return;
+	}
+	try {
+		$oauth = new Hybrid_Auth(app_path() . '/config/fb_auth.php');
+		$provider = $oauth->authenticate('Facebook');
+		$profile = $provider->getUserProfile();
+	} catch (Exception $e) {
+		return $e->getMessage();
+	}
+	echo "Welcome $profile->firstName $profile->lastName <br>";
+	echo "Your email: $profile->email <br>";
+	dd($profile);
+});

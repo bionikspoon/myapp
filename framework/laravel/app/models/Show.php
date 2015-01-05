@@ -10,4 +10,8 @@ class Show extends Eloquent
 	{
 		return $this->where('rating', '>', 5)->orderBy('rating', 'DESC')->get();
 	}
+	public function users()
+	{
+		return $this->belongsToMany('User');
+	}
 }

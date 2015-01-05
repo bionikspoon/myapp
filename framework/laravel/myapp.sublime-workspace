@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"Sch-dr",
+				"Schema-dropIfExists	Schema-dropIfExists"
+			],
+			[
+				"Sh",
+				"Show"
+			],
+			[
+				"order",
+				"orderBy"
+			],
+			[
+				"DB",
+				"DB-table	DB-table"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
 				"prof",
 				"profile"
 			],
@@ -90,10 +110,6 @@
 			[
 				"with",
 				"withInput"
-			],
-			[
-				"arr",
-				"array	$… = array (…)"
 			],
 			[
 				"ar",
@@ -291,7 +307,23 @@
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1109,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/database/migrations/2015_01_05_202515_create_users_table.php",
+			"settings":
+			{
+				"buffer_size": 560,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/User.php",
+			"settings":
+			{
+				"buffer_size": 715,
 				"line_ending": "Windows"
 			}
 		}
@@ -302,6 +334,10 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -319,7 +355,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -343,10 +379,26 @@
 		"/C/xampp/htdocs/myapp/framework/laravel",
 		"/C/xampp/htdocs/myapp/framework/laravel/app",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/config",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/views/emails"
+		"/C/xampp/htdocs/myapp/framework/laravel/app/config/packages",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/config/testing",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/controllers",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/tests",
+		"/C/xampp/htdocs/myapp/framework/laravel/bootstrap"
 	],
 	"file_history":
 	[
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/Default (Windows).sublime-keymap",
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/xampp/htdocs/myapp/framework/laravel/artisan",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_05_200630_add_data_to_shows_table.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/models/Show.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_05_194751_add_data_to_shows_table.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_05_192236_add_data_to_shows_table.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_05_191517_add_actor_to_shows_table.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_05_191135_create_shows_table.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/config/li_auth.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/config/tw_auth.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/.env.local.php",
@@ -391,7 +443,6 @@
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/hello.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/userform.php",
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/Custom/Shapes/MyShapes.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/MyShapes.php",
@@ -416,6 +467,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'')\n",
+			"  ",
 			"',\n",
 			"default",
 			"br",
@@ -438,7 +491,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -447,15 +500,73 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1109,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/database/migrations/2015_01_05_202515_create_users_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								523,
+								523
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/models/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								322,
+								322
 							]
 						],
 						"settings":
@@ -550,7 +661,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 183.0,
+	"side_bar_width": 217.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

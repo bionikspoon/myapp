@@ -45,3 +45,22 @@ Route::get('user', function()
 		var_dump($valid->messages());
 	}
 });
+Route::get('add-show', function()
+{
+	$user = new User();
+	$user->username = 'John Doe';
+	$user->email = 'johndoe@myapp.dev';
+	$user->save();
+
+	$user->shows()->attach(1);
+	$user->shows()->attach(3);
+
+	foreach ($user->shows() as $show) {
+		var_dump($show->name);
+	}
+});
+Route::get('view-show', function()
+{
+	$show = Show::find(1)->users;
+	dd($show);
+});

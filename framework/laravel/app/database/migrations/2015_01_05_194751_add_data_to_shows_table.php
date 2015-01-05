@@ -28,9 +28,9 @@ class AddDataToShowsTable extends Migration {
 	{
 		//
 		DB::table('shows')
-		->where('name', 'Andrew Lincoln')
-		->orWhere('name', 'Billy Burke')
-		->orWhere('name', 'Charlie Hunnam')
+		->where('actor', 'Andrew Lincoln')
+		->orWhere('actor', 'Billy Burke')
+		->orWhere('actor', 'Charlie Hunnam')
 		->delete();
 	}
 

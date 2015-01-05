@@ -17,7 +17,15 @@ Route::get('/', function()
 });
 Route::get('shows', function()
 {
-	$shows = new Show();
-	$shows_by_rating = $shows->allShows('rating', 'DESC');
-	dd($shows_by_rating);
+	$shows = Show::All();
+	echo '<h1>All Shows</h1>';
+	foreach ($shows as $show) {
+		echo "$show->name - $show->rating - $show->actor <br>";
+	}
+	$show_object = new Show();
+	$top_shows = $show_object->getTopShows();
+	echo '<h1>Top Shows</h1>';
+	foreach ($top_shows as $show) {
+		echo "$show->name - $show->rating - $show->actor <br>";
+	}
 });

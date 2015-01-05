@@ -64,3 +64,4 @@ Route::get('view-show', function()
 	$show = Show::find(1)->users;
 	dd($show);
 });
+Route::controller('users', 'UsersController');

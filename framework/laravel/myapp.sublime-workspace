@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fg",
+				"fgetcsv"
+			],
+			[
 				"fu",
 				"fun	function …"
 			],
@@ -312,42 +316,34 @@
 	"buffers":
 	[
 		{
+			"file": "public/scifi.csv",
+			"settings":
+			{
+				"buffer_size": 92,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/GitHub/phptherightway-book/convert.php",
+			"settings":
+			{
+				"buffer_size": 1859,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 1508,
+				"buffer_size": 1829,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/users/index.php",
+			"file": "app/models/Scifi.php",
 			"settings":
 			{
-				"buffer_size": 844,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/UsersController.php",
-			"settings":
-			{
-				"buffer_size": 942,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/users/create.php",
-			"settings":
-			{
-				"buffer_size": 144,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/users/record.php",
-			"settings":
-			{
-				"buffer_size": 312,
+				"buffer_size": 120,
 				"line_ending": "Windows"
 			}
 		}
@@ -406,20 +402,23 @@
 	[
 		"/C/xampp/htdocs/myapp/framework/laravel",
 		"/C/xampp/htdocs/myapp/framework/laravel/app",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/config/packages",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/config/testing",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/controllers",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/models",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_06_045904_create_scifi_table.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/routes.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/users/index.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/controllers/UsersController.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/users/record.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/views/users/create.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/models/Show.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_05_220408_create_show_user.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/models/User.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/controllers/BaseController.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/config/remote.php",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/routes.php",
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_05_202515_create_users_table.php",
@@ -522,53 +521,52 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/routes.php",
+					"file": "public/scifi.csv",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1508,
+						"buffer_size": 92,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1508,
-								1508
+								92,
+								92
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/users/index.php",
+					"file": "/G/GitHub/phptherightway-book/convert.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 844,
+						"buffer_size": 1859,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								824,
-								824
+								0,
+								0
 							]
 						],
 						"settings":
@@ -579,80 +577,53 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/UsersController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 942,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								563,
-								563
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/views/users/create.php",
+					"buffer": 2,
+					"file": "app/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 144,
+						"buffer_size": 1829,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								45,
-								45
+								1829,
+								1829
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 420.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/views/users/record.php",
+					"buffer": 3,
+					"file": "app/models/Scifi.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 312,
+						"buffer_size": 120,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								277,
-								277
+								99,
+								99
 							]
 						],
 						"settings":

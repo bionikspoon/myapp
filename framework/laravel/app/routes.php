@@ -65,3 +65,17 @@ Route::get('view-show', function()
 	dd($show);
 });
 Route::controller('users', 'UsersController');
+Route::get('csv', function()
+{
+	if (($handle = fopen(public_path() . '/scifi.csv', 'r')) !== FALSE)
+	{
+		while (($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+			$scifi = new Scifi();
+			$scifi->character = $data[0];
+			$scifi->movie = $data[1];
+			$scifi->save();
+		}
+		fclose($handle);
+	}
+	return Scifi::all();
+});

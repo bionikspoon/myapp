@@ -44,3 +44,5 @@ Temporary Items
 
 # Custom Ignore
 /framework/laravel/.env.*.php
+myapp.sublime-project
+myapp.sublime-workspace

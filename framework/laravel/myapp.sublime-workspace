@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"simpl",
+				"simplexml_load_string"
+			],
+			[
+				"get_",
+				"get_headers"
+			],
+			[
 				"fg",
 				"fgetcsv"
 			],
@@ -316,34 +324,26 @@
 	"buffers":
 	[
 		{
-			"file": "public/scifi.csv",
-			"settings":
-			{
-				"buffer_size": 92,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/G/GitHub/phptherightway-book/convert.php",
-			"settings":
-			{
-				"buffer_size": 1859,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 1829,
+				"buffer_size": 2712,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/models/Scifi.php",
+			"file": "app/models/Odd.php",
 			"settings":
 			{
-				"buffer_size": 120,
+				"buffer_size": 392,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/database/migrations/2015_01_05_191135_create_shows_table.php",
+			"settings":
+			{
+				"buffer_size": 532,
 				"line_ending": "Windows"
 			}
 		}
@@ -351,19 +351,31 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 58.0,
 		"selected_items":
 		[
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"pc",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Add Repository"
+			],
+			[
+				"git",
+				"Github: Repository"
+			],
 			[
 				"pci",
 				"Package Control: Install Package"
 			],
 			[
 				"pac",
-				"Package Control: Install Package"
-			],
-			[
-				"pack",
 				"Package Control: Install Package"
 			],
 			[
@@ -386,6 +398,8 @@
 		"height": 228.0,
 		"history":
 		[
+			"php",
+			"cmd",
 			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -400,16 +414,30 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/myapp/framework/laravel",
 		"/C/xampp/htdocs/myapp/framework/laravel/app",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/controllers",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/models",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/views"
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/models"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_06_045904_create_scifi_table.php",
+		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/C/xampp/htdocs/myapp/framework/laravel/myapp.sublime-project",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/temp.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_07_005053_create_odd_table.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_07_005344_add_data_to_odd_table.php",
+		"/G/Manu/Documents/laravel_helper/_ide_helper.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/filters.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/vendor/symfony/finder/Symfony/Component/Finder/Iterator/FilterIterator.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/vendor/laravel/framework/src/Illuminate/Cache/ApcStore.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/vendor/laravel/framework/src/Illuminate/Cache/ApcWrapper.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/vendor/laravel/framework/src/Illuminate/Cache/ArrayStore.php",
+		"/G/GitHub/phptherightway-book/convert.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/config/production/database.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/config/production/app.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/routes.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/models/Scifi.php",
+		"/C/xampp/htdocs/myapp/framework/laravel/public/scifi.csv",
+		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_06_045904_create_scifi_table.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/users/index.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/controllers/UsersController.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/users/record.php",
@@ -454,7 +482,6 @@
 		"/C/xampp/htdocs/myapp/framework/laravel/app/config/oauth.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/profile-edit.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/profile.php",
-		"/C/xampp/htdocs/myapp/framework/laravel/app/filters.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/registration.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/views/login.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/database/migrations/2015_01_04_013328_create_users_table.php",
@@ -476,14 +503,13 @@
 		"/C/Users/Manu/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/Custom/Shapes/MyShapes.php",
 		"/C/xampp/htdocs/myapp/framework/laravel/app/custom/MyShapes.php",
-		"/C/xampp/htdocs/myapp/framework/laravel/myapp.sublime-project",
 		"/C/xampp/htdocs/myapp/.htaccess",
 		"/C/xampp/htdocs/myapp/public/.htaccess",
 		"/C/xampp/htdocs/myapp/laravel/public/index.php"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -497,6 +523,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"odd",
+			"();\n",
+			"function",
 			"'')\n",
 			"  ",
 			"',\n",
@@ -521,29 +550,58 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/scifi.csv",
+					"file": "app/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 92,
+						"buffer_size": 2712,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								92,
-								92
+								2505,
+								2505
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 952.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/models/Odd.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								392
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -553,48 +611,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/G/GitHub/phptherightway-book/convert.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1859,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
-					"file": "app/routes.php",
+					"file": "app/database/migrations/2015_01_05_191135_create_shows_table.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1829,
+						"buffer_size": 532,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1829,
-								1829
+								374,
+								374
 							]
 						],
 						"settings":
@@ -603,38 +633,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/models/Scifi.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 120,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								99,
-								99
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -682,7 +684,7 @@
 	"project": "myapp.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -690,6 +692,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"r",
+				"app\\routes.php"
+			],
+			[
+				"filters",
+				"app\\filters.php"
+			]
 		],
 		"width": 0.0
 	},

@@ -102,3 +102,16 @@ Route::get('rss', function()
 	}
 	return $posts;
 });
+Route::get('odd', function(){
+	$odds = Odd::all();
+	foreach ($odds as $odd) {
+		echo "$odd->myIDcolumn - $odd->MyUsernameGoesHere - $odd->ThisIsAnEmail <br>";
+	}
+});
+Route::get('notodd', function()
+{
+	$odds = Odd::all();
+	foreach ($odds as $odd) {
+		echo "$odd->id - $odd->username - $odd->email <br>";
+	}
+});

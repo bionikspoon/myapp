@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddActorToShowsTable' => $baseDir . '/app/database/migrations/2015_01_05_191517_add_actor_to_shows_table.php',
+    'AddDataToOddTable' => $baseDir . '/app/database/migrations/2015_01_07_005344_add_data_to_odd_table.php',
     'AddDataToShowsTable' => $baseDir . '/app/database/migrations/2015_01_05_192236_add_data_to_shows_table.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
@@ -30,6 +31,7 @@ return array(
     'ClassPreloader\\Parser\\DirVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/DirVisitor.php',
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
+    'CreateOddTable' => $baseDir . '/app/database/migrations/2015_01_07_005053_create_odd_table.php',
     'CreateScifiTable' => $baseDir . '/app/database/migrations/2015_01_06_045904_create_scifi_table.php',
     'CreateShowUser' => $baseDir . '/app/database/migrations/2015_01_05_220408_create_show_user.php',
     'CreateShowsTable' => $baseDir . '/app/database/migrations/2015_01_05_191135_create_shows_table.php',
@@ -969,6 +971,7 @@ return array(
     'Psr\\Log\\LoggerInterface' => $vendorDir . '/psr/log/Psr/Log/LoggerInterface.php',
     'Psr\\Log\\LoggerTrait' => $vendorDir . '/psr/log/Psr/Log/LoggerTrait.php',
     'Psr\\Log\\NullLogger' => $vendorDir . '/psr/log/Psr/Log/NullLogger.php',
+    'Scifi' => $baseDir . '/app/models/Scifi.php',
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'Show' => $baseDir . '/app/models/Show.php',
     'Stack\\Builder' => $vendorDir . '/stack/builder/src/Stack/Builder.php',

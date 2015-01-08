@@ -115,3 +115,43 @@ Route::get('notodd', function()
 		echo "$odd->id - $odd->username - $odd->email <br>";
 	}
 });
+$db_setup = Config::get('database.connections.mysql');
+
+R::setup(
+	"mysql:host=" . $db_setup['host'] . ";dbname=" . $db_setup['database'], 
+	$db_setup['username'],
+	$db_setup['password']
+	);
+
+Route::get('orm', function()
+{
+
+	$superhero = R::dispense('superheroes');
+	$superhero->name = 'Spiderman';
+	$superhero->city = 'New York';
+	$superhero->age = 24;
+
+	$id1 = R::store($superhero);
+
+	$superhero = R::dispense('superheroes');
+	$superhero->name = 'Superman';
+	$superhero->city = 'Metropalis';
+	$superhero->age = 50;
+
+	$id2 = R::store($superhero);
+
+	$superhero = R::dispense('superheroes');
+	$superhero->name = 'Batman';
+	$superhero->city = 'Gotham';
+	$superhero->age = 36;
+
+	$id3 = R::store($superhero);
+
+	$heroes = R::batch('superheroes', [$id1, $id2, $id3]);
+
+	$response = "";
+	foreach ($heroes as $hero) {
+		$response .= $hero->name . " - " . $hero->city . " - " . $hero->age . "<br>";
+	}
+	return $response;
+});

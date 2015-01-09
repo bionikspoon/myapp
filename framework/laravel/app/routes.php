@@ -24,3 +24,14 @@ Route::get('hello/world', function()
 	$world = 'World';
 	return "$hello {$world}!";
 });
+Route::get('tvshow/{show?}/{year?}', function($show = null, $year = null)
+{
+	if (!$show && !$year) {
+		return 'You did not pick a show.';
+	}
+	elseif (!$year) {
+		return "You picked the show <strong>$show</strong>.";
+	}
+	return "You picked the show <strong>$show</strong> from the year <em>$year</em>.";
+})
+->where('year', '\d{4}');

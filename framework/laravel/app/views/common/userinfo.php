@@ -1,0 +1,1 @@
+<p>You are <?php echo $my_name ?>, from <?php echo $my_city ?></p>

@@ -18,12 +18,15 @@ Route::get('/', function()
 Route::get('home', function()
 {
 	$page_title = "My Home Page Title";
-	return View::make('myviews.home')->with('title', $page_title);
+	return View::make('myviews.home')
+	->nest('header', 'common.header')
+	->nest('footer', 'common.footer')
+	->with('title', $page_title);
 });
 Route::get('second', function()
 {
 	$view = View::make('myviews.second');
-	$view->my_name = "Bionikspoon";
-	$view->my_city =  "Chicago";
+	$view->nest('header', 'common.header')->nest('footer', 'common.footer');
+	$view->nest('userinfo', 'common.userinfo', ['my_name' => 'Bionikspoon', 'my_city' => 'Chicago']);
 	return $view;
 });

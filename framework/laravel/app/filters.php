@@ -85,3 +85,17 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+
+Route::filter('checkAdmin', function()
+{
+	if ('admin' !== Session::get('user_type')) {
+		//return dd(Session::all());
+		return 'You are not an Admin. Go Away!';
+	}
+});
+Route::filter('logAdmin', function()
+{
+	Log::info('Admin logged in on ' . date('m/d/Y'));
+});

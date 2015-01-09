@@ -99,3 +99,11 @@ Route::filter('logAdmin', function()
 {
 	Log::info('Admin logged in on ' . date('m/d/Y'));
 });
+
+Route::filter('checkUser', function()
+{
+	if ('user' !== Session::get('profile'))
+	{
+		return "You are not logged in. Go Away!";
+	}
+});

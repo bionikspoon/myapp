@@ -42,7 +42,7 @@ Route::get('admin-only', ['before' => 'checkAdmin', 'after' => 'logAdmin', funct
 }]);
 Route::get('set-admin/{admin}', function($admin)
 {
-	if ($admin == 'on') {
+	if ($admin) {
 		# code...
 		Session::put('user_type', 'admin');
 	} else {
@@ -50,4 +50,25 @@ Route::get('set-admin/{admin}', function($admin)
 	}
 	
 	return Redirect::to('admin-only');
+});
+
+Route::get('set-profile/{user}', function($user)
+{
+	if ($user) {
+		Session::set('profile', 'user');
+	} else {
+		Session::forget('profile');
+	}
+	return Redirect::to('profile/user');
+});
+Route::group(['before' => 'checkUser', 'prefix' => 'profile'], function()
+{
+	Route::get('user', function()
+	{
+		return 'I am logged in! This is my user profile.' . dd(Session::all());
+	});
+	Route::get('friends', function()
+	{
+		return 'This would be a list of friends';
+	});
 });

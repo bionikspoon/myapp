@@ -154,3 +154,12 @@ Route::get('link', function()
 {
 	return '<a href="'.URL::route('named').'">Link!</a>';
 });
+Route::get('/', function()
+{
+	$url = parse_url(URL::current());
+	$host = explode(',', $url['host']);
+	$subdomain = $host[0];
+
+	$name = DB::table('users')->where('id', $subdomain)->get();
+	dd($name);
+});

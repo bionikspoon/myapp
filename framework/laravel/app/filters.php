@@ -85,8 +85,3 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
-
-
-Route::filter('assets', function(){
-	HTML::script(url, attributes, secure); //TODO: Come back to me
-});

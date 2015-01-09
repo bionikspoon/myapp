@@ -15,3 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('home', function()
+{
+	return View::make('myviews.home');
+});
+Route::get('second', function()
+{
+	return View::make('myviews.second');
+});

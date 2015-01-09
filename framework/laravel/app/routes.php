@@ -11,6 +11,14 @@
 |
 */
 
+Route::group(['domain' => '{subdomain}.myapp.dev'], function()
+{
+	Route::get('/', function($subdomain)
+	{
+		$name = DB::table('users')->where('id', $subdomain)->get();
+		return dd($name);
+	});
+});
 Route::get('/', function()
 {
 	return View::make('hello');
@@ -153,13 +161,4 @@ Route::get('redirect', function()
 Route::get('link', function()
 {
 	return '<a href="'.URL::route('named').'">Link!</a>';
-});
-Route::get('/', function()
-{
-	$url = parse_url(URL::current());
-	$host = explode(',', $url['host']);
-	$subdomain = $host[0];
-
-	$name = DB::table('users')->where('id', $subdomain)->get();
-	dd($name);
 });

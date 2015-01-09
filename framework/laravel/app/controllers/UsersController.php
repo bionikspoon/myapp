@@ -16,6 +16,23 @@ class UsersController extends BaseController {
     {
         return "This is a User About Page";
     }
-
+    public function getIndex()
+    {
+    	$myForm = "";
+    	$myForm .= Form::open();
+    	$myForm .= Form::label('username', 'Username');
+    	$myForm .= Form::text('username', Form::old('username'));
+    	$myForm .= Form::submit('Dont do it!');
+    	$myForm .= Form::close();
+		return $myForm;
+    }
+    public function postIndex()
+    {
+    	return dd(Input::all());
+    }
+    public function getAbout()
+    {
+    	return "TODO: About user page";
+    }
 
 }

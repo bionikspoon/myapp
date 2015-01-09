@@ -15,5 +15,12 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-Route::get('users', 'UsersController@actionIndex');
-Route::get('users/about', 'UsersController@actionAbout');
+Route::controller('users', 'UsersController');
+Route::get('old_users', 'UsersController@actionIndex');
+Route::get('old_users/about', 'UsersController@actionAbout');
+Route::get('hello/world', function()
+{
+	$hello = 'Hello';
+	$world = 'World';
+	return "$hello {$world}!";
+});

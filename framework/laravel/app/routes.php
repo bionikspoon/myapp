@@ -72,3 +72,73 @@ Route::group(['before' => 'checkUser', 'prefix' => 'profile'], function()
 		return 'This would be a list of friends';
 	});
 });
+
+Route::get('show/{id?}', function($id = null)
+{
+	if (!$id) {
+		return Show::all();
+	} 
+	if ($show = Show::find($id)) {
+		return $show;
+	}
+
+});
+Route::post('show', function()
+{
+	$show = new Show;
+	$show->name = Input::get('name');
+	$show->rating = Input::get('rating');
+	$show->save();
+	return $show;
+});
+Route::delete('show/{id}', function($id)
+{
+	if ($show = Show::find($id)) {
+		$show->delete();
+		return json_encode(['message' => "Record $id deleted."]);
+	}
+});
+Route::put('show/{id}', function($id)
+{
+	if ($show = Show::find($id)) {
+		if (Input::get('name')) {
+			$show->name = Input::get('name');
+		}
+		if (Input::get('rating'))
+		{
+			$show->rating = Input::get('rating');
+		}
+		$show->save();
+		return $show;
+	}
+});
+Route::get('show-form/{id?}', function($id = null)
+{
+	$data = [];
+	if ($id) {
+		if (!$show = Show::find($id)) {
+			return 'No show with that ID';
+		}
+		$data = [
+			'id'		=> $id,
+			'method'	=> 'PUT',
+			'name'		=> $show->name,
+			'rating'	=> $show->rating,
+		];
+	} else {
+		
+		$data = [
+			'id'		=> '',
+			'method'	=> 'POST',
+			'name'		=> '',
+			'rating'	=> '',
+		];
+	}
+	//return dd($data);
+	return View::make('show-form', $data);
+});
+Route::get('show-delete', function()
+{
+	$shows = Show::all();
+	return View::make('show-delete')->with('shows', $shows);
+});

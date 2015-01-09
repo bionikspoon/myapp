@@ -8,6 +8,9 @@
 		"laravel/framework": "4.2.*",
 		"barryvdh/laravel-ide-helper": "~1.11"
 	},
+	"require-dev": {
+		"way/generators": "~2.0"
+	},
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -16,10 +19,7 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		],
-		"psr-0": {
-			"Custom": "app/custom"
-		}
+		]
 	},
 	"scripts": {
 		"post-install-cmd": [

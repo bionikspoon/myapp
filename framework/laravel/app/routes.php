@@ -142,3 +142,15 @@ Route::get('show-delete', function()
 	$shows = Show::all();
 	return View::make('show-delete')->with('shows', $shows);
 });
+Route::get('new-route', ['as' => 'named', function ()
+{
+	return 'Welcome to ' . URL::current();
+}]);
+Route::get('redirect', function()
+{
+	return Redirect::route('named');
+});
+Route::get('link', function()
+{
+	return '<a href="'.URL::route('named').'">Link!</a>';
+});

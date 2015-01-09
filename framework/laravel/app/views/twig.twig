@@ -1,0 +1,12 @@
+{% extends 'twiglayout.twig' %}
+
+{% block page_title %}
+	{{ parent()}}
+	My Twig Page
+{% endblock %}
+
+{% block content %}
+	<p>
+		Go to {{ link|raw }}
+	</p>
+{% endblock %}

@@ -30,3 +30,17 @@ Route::get('second', function()
 	$view->nest('userinfo', 'common.userinfo', ['my_name' => 'Bionikspoon', 'my_city' => 'Chicago']);
 	return $view;
 });
+Route::get('blade-home', function()
+{
+	return View::make('blade.home')	;
+});
+Route::get('blade-second', function()
+{
+	return View::make('blade.second');
+});
+
+Route::get('twig-view', function()
+{
+	$link = HTML::link('http://laravel.com', 'the laravel site.');
+	return View::make('twig')->with('link', $link);
+});

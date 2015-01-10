@@ -56,3 +56,26 @@ Route::get('twig-view', function()
 	$link = HTML::link('http://laravel.com', 'the laravel site.');
 	return View::make('twig')->with('link', $link);
 });
+Route::get('choose', function()
+{
+	return View::make('language.choose');
+});
+Route::post('choose', function()
+{
+	Session::put('lang', Input::get('language'));
+	return Redirect::to('localized');
+});
+Route::get('localized', function()
+{
+	$lang = Session::get('lang', function()
+	{
+		return 'en';
+	});
+	App::setLocale($lang);
+	return View::make('language.localized');
+});
+Route::get('localized-german', function()
+{
+	App::setLocale('de');
+	return View::make('language.localized-german');
+});

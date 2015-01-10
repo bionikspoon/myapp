@@ -49,7 +49,7 @@ Temporary Items
 
 # Custom Ignore
 /framework/laravel/.env.*.php
-myapp.sublime-project
-myapp.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 Laravel Application Development Cookbook - Terry Matula.pdf
 .idea/

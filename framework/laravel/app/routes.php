@@ -81,24 +81,28 @@ Route::get('localized-german', function()
 });
 Route::get('menu-one', function()
 {
-	return View::make('menu-layout')
-		->nest('menu', 'menu-menu')
+	return View::of('layout')
 		->nest('content', 'menu-one');
 });
 Route::get('menu-two', function()
 {
-	return View::make('menu-layout')
-		->nest('menu', 'menu-menu')
+	return View::of('layout')
 		->nest('content', 'menu-two');
 });
 Route::get('menu-three', function()
 {
-	return View::make('menu-layout')
-		->nest('menu', 'menu-menu')
+	return View::of('layout')
 		->nest('content', 'menu-three');
 });
 Route::get('boot', function()
 {
 	$superheroes = ['Batman', 'Superman', 'Wolverine', 'Deadpool', 'Iron Man'];
 	return View::make('boot')->with('superheroes', $superheroes);
+});
+View::name('menu-layout', 'layout');
+View::composer('menu-layout', function($view)
+{
+	$view->with('style', HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'));
+	$view->nest('menu', 'menu-menu');
+	$view->with('page_title', 'View Composer Title');
 });

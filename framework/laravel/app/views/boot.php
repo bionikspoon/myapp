@@ -45,13 +45,6 @@
 
 			<?php echo Form::close() ?>
 		</div>
-		<div class="tab-pane active" id="welcome">
-			<h4></h4>
-			<p></p>
-			<ul>
-				<li class="badge badge-info"></li>
-			</ul>
-		</div>
 	</div>
 </div>
 <?php echo HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js') ?>

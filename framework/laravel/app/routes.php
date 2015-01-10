@@ -32,11 +32,23 @@ Route::get('second', function()
 });
 Route::get('blade-home', function()
 {
-	return View::make('blade.home')	;
+	$movies = [
+		[ 'name' => 'Star Wars', 'year' => '1977', 'slug' => 'star-wars'],
+		[ 'name' => 'The Matrix', 'year' => '1999', 'slug' => 'matrix'],
+		[ 'name' => 'Die Hard', 'year' => '1988', 'slug' => 'die-hard'],
+		[ 'name' => 'Clerks', 'year' => '1994', 'slug' => 'clerks'],
+	];
+	return View::make('blade.home')->with('movies', $movies);
 });
-Route::get('blade-second', function()
+Route::get('blade-second/{slug}', function($slug)
 {
-	return View::make('blade.second');
+	$movies = [
+		'star-wars' => [ 'name' => 'Star Wars', 'year' => '1977', 'genre' => 'Sci-fi'],
+		'matrix' => [ 'name' => 'The Matrix', 'year' => '1999', 'genre' => 'Sci-fi'],
+		'die-hard' => ['name' => 'Die Hard', 'year' => '1988', 'genre' => 'Action'],
+		'clerks' => ['name' =>'Clerks', 'year' => '1994', 'genre' => 'Comedy'],
+	];
+	return View::make('blade.second')->with('movie', $movies[$slug]);
 });
 
 Route::get('twig-view', function()

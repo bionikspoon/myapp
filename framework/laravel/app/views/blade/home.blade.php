@@ -2,11 +2,21 @@
 
 @section('page_title')
 	@parent
-		Our Blade Home
+		Our List of Movies
 @endsection
 
 @section('content')
-<p>
-	Go to {{ HTML::link('blade-second', 'the Second page.')}}
-</p>
+
+	<ul>
+	@foreach ($movies as $movie)
+		<li> {{ HTML::link('blade-second/' . $movie['slug'], $movie['name'])}}
+			@if ($movie['name'] == 'Die Hard')
+			<ul>
+				<li>Main character: John McClane</li>
+			</ul>
+			@endif
+		</li>
+	@endforeach
+	</ul>
+
 @endsection

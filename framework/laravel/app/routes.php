@@ -79,3 +79,21 @@ Route::get('localized-german', function()
 	App::setLocale('de');
 	return View::make('language.localized-german');
 });
+Route::get('menu-one', function()
+{
+	return View::make('menu-layout')
+		->nest('menu', 'menu-menu')
+		->nest('content', 'menu-one');
+});
+Route::get('menu-two', function()
+{
+	return View::make('menu-layout')
+		->nest('menu', 'menu-menu')
+		->nest('content', 'menu-two');
+});
+Route::get('menu-three', function()
+{
+	return View::make('menu-layout')
+		->nest('menu', 'menu-menu')
+		->nest('content', 'menu-three');
+});

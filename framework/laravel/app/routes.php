@@ -97,3 +97,8 @@ Route::get('menu-three', function()
 		->nest('menu', 'menu-menu')
 		->nest('content', 'menu-three');
 });
+Route::get('boot', function()
+{
+	$superheroes = ['Batman', 'Superman', 'Wolverine', 'Deadpool', 'Iron Man'];
+	return View::make('boot')->with('superheroes', $superheroes);
+});

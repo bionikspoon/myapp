@@ -17,3 +17,12 @@ Route::get('/', function()
 });
 Route::resource('cities', 'CitiesController');
 Route::resource('superheroes', 'SuperheroesController');
+
+Route::get('vimeo/{username?}', function( $username = null) use ($app)
+{
+	$vimeo = $app['vimeolist'];
+	if ($username) {
+		$vimeo->setUser($username);
+	}
+	dd($vimeo->getList());
+});

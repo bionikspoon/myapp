@@ -15,3 +15,21 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('getting-data', function()
+{
+	return View::make('getting-data');
+});
+Route::get('tab1', function()
+{
+	if (Request::ajax()) {
+		return View::make('tab1');
+	}
+	return Response::error('404');
+});
+Route::get('tab2', function()
+{
+	if (Request::ajax()) {
+		return View::make('tab2');
+	}
+	return Response::error('404');
+});

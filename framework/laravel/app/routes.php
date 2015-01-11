@@ -24,12 +24,12 @@ Route::get('tab1', function()
 	if (Request::ajax()) {
 		return View::make('tab1');
 	}
-	return Response::error('404');
+	return App::abort(404);
 });
 Route::get('tab2', function()
 {
 	if (Request::ajax()) {
 		return View::make('tab2');
 	}
-	return Response::error('404');
+	return App::abort(404);
 });

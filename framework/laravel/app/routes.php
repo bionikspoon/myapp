@@ -33,3 +33,4 @@ Route::get('tab2', function()
 	}
 	return App::abort(404);
 });
+Route::controller('books', 'BooksController');

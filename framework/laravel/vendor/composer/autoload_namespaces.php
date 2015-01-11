@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Whoops' => array($vendorDir . '/filp/whoops/src'),
+    'Wesleytodd\\UniversalForms' => array($vendorDir . '/wesleytodd/universal-forms/src'),
     'Way\\Generators' => array($vendorDir . '/way/generators/src'),
     'System' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),

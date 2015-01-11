@@ -1798,5 +1798,43 @@
             "image manipulation",
             "image processing"
         ]
+    },
+    {
+        "name": "wesleytodd/universal-forms",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wesleytodd/Universal-Forms-PHP.git",
+            "reference": "b01d13ee1b1ac6063657565513da533983c38ac9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wesleytodd/Universal-Forms-PHP/zipball/b01d13ee1b1ac6063657565513da533983c38ac9",
+            "reference": "b01d13ee1b1ac6063657565513da533983c38ac9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2013-08-25 00:39:54",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Wesleytodd\\UniversalForms": "src/"
+            }
+        },
+        "authors": [
+            {
+                "name": "Wes Todd",
+                "email": "wes@wesleytodd.com"
+            }
+        ],
+        "description": "A Universal Form Implementation in PHP",
+        "support": {
+            "source": "https://github.com/wesleytodd/Universal-Forms-PHP/tree/master",
+            "issues": "https://github.com/wesleytodd/Universal-Forms-PHP/issues"
+        }
     }
 ]

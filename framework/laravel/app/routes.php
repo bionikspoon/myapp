@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function()
 {
 	return View::make('hello');
@@ -25,4 +26,47 @@ Route::get('vimeo/{username?}', function( $username = null) use ($app)
 		$vimeo->setUser($username);
 	}
 	dd($vimeo->getList());
+});
+
+$form_json = '{
+	"action" : "uform",
+	"method" : "POST",
+	"fields" : [
+	{
+		"name" : "name",
+		"type" : "text",
+		"label" : "Name",
+		"rules" : ["required"]
+	},
+	{
+		"name" : "email",
+		"type" : "email",
+		"label" : "Email",
+		"value" : "myemail@example.com",
+		"rules" : ["required", "email"]
+	},
+	{
+		"name" : "message",
+		"type" : "textarea",
+		"label" : "Message",
+		"rules" : ["required", "length[30,]"]
+	}
+	]
+}';
+
+$uform = new Wesleytodd\UniversalForms\Drivers\Laravel\Form($form_json);
+
+Route::get('uform', function() use ($uform)
+{
+	return $uform->render();
+});
+Route::post('uform', function() use ($uform)
+{
+	$valid = $uform->valid(Input::all());
+	if ($valid)
+	{
+		dd(Input::all());
+	} else {
+		dd($uform->getErrors());
+	}
 });

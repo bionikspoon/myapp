@@ -7,8 +7,15 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"way/generators": "2.6.1",
-		"imagine/imagine": "dev-master"
+		"imagine/imagine": "dev-master",
+		"wesleytodd/universal-forms": "dev-master"
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/wesleytodd/Universal-Forms-PHP"
+		}
+	],
 	"autoload": {
 		"classmap": [
 			"app/commands",

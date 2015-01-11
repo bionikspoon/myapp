@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5076eaa76d7961aec55506c068f1a995",
+    "hash": "ac92e30fb90e3a867bf7875ae3958195",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1743,13 +1743,50 @@
             ],
             "description": "Rapidly generate resources, migrations, models, and much more.",
             "time": "2014-05-27 14:21:26"
+        },
+        {
+            "name": "wesleytodd/universal-forms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wesleytodd/Universal-Forms-PHP.git",
+                "reference": "b01d13ee1b1ac6063657565513da533983c38ac9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wesleytodd/Universal-Forms-PHP/zipball/b01d13ee1b1ac6063657565513da533983c38ac9",
+                "reference": "b01d13ee1b1ac6063657565513da533983c38ac9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Wesleytodd\\UniversalForms": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Wes Todd",
+                    "email": "wes@wesleytodd.com"
+                }
+            ],
+            "description": "A Universal Form Implementation in PHP",
+            "support": {
+                "source": "https://github.com/wesleytodd/Universal-Forms-PHP/tree/master",
+                "issues": "https://github.com/wesleytodd/Universal-Forms-PHP/issues"
+            },
+            "time": "2013-08-25 00:39:54"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "imagine/imagine": 20
+        "imagine/imagine": 20,
+        "wesleytodd/universal-forms": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

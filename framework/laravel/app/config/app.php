@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Bionikspoon\Vimeolist\VimeolistServiceProvider',
+		'Wesleytodd\UniversalForms\Drivers\Laravel\UniversalFormsServiceProvider'
 	),
 
 	/*

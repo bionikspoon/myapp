@@ -1059,6 +1059,7 @@ return array(
     'Stack\\StackedHttpKernel' => $vendorDir . '/stack/builder/src/Stack/StackedHttpKernel.php',
     'Superhero' => $baseDir . '/app/models/Superhero.php',
     'SuperheroesController' => $baseDir . '/app/controllers/SuperheroesController.php',
+    'SuperheroesTableSeeder' => $baseDir . '/app/database/seeds/SuperheroesTableSeeder.php',
     'Symfony\\Component\\BrowserKit\\Client' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php',
     'Symfony\\Component\\BrowserKit\\Cookie' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Cookie.php',
     'Symfony\\Component\\BrowserKit\\CookieJar' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/CookieJar.php',

@@ -37,3 +37,31 @@ Route::controller('stories', 'StoriesController');
 Route::controller('search', 'SearchController');
 Route::resource('users', 'UsersController');
 Route::resource('books', 'BooksController');
+Route::get('signup', function()
+{
+	return View::make('signup');
+});
+Route::post('signup-submit', function()
+{
+	try {			
+		$mc = new Mailchimp();
+		$mcl = new Mailchimp_Lists($mc);
+		$response = $mc->listSubscribe(
+			'{list_id}',
+			Input::get('email'),
+			[
+			'FNAME' => Input::get('fname'),
+			'LNAME' => Input::get('lname')
+			]
+		);
+		if ($mc->errorCode()) {
+			return 'There was an error' . $mc->errorMessage;
+		} else {
+			return 'You have subscribed!';
+		}
+	} catch (Exception $e) {
+		return dd($e);
+	}
+
+	
+});

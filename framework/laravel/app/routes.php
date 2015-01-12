@@ -43,25 +43,32 @@ Route::get('signup', function()
 });
 Route::post('signup-submit', function()
 {
+		$mc = new Mailchimp($_ENV['MC_APP_SECRET']);
+		$id = 'a0a4353cb0';
+		// $params = ['email' => Input::get('email')];
+		$params = ['email' => 'fake@fake.com'];
 	try {			
-		$mc = new Mailchimp();
-		$mcl = new Mailchimp_Lists($mc);
-		$response = $mc->listSubscribe(
-			'{list_id}',
-			Input::get('email'),
-			[
-			'FNAME' => Input::get('fname'),
-			'LNAME' => Input::get('lname')
-			]
-		);
-		if ($mc->errorCode()) {
-			return 'There was an error' . $mc->errorMessage;
-		} else {
-			return 'You have subscribed!';
-		}
+		$response = $mc->lists->subscribe($id, $params);
 	} catch (Exception $e) {
 		return dd($e);
 	}
 
+	if ($mc->errorCode()) {
+		return 'There was an error' . $mc->errorMessage;
+	} else {
+		return 'You have subscribed!';
+	}
 	
+});
+
+Route::get('test', function()
+{
+	$ch = curl_init();
+	$url = 'https://google.com';
+
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+	$response = curl_exec($ch);
+	curl_close($ch);
+	return dd($response);
 });

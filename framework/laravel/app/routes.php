@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +33,7 @@ Route::get('tab2', function()
 	}
 	return App::abort(404);
 });
-Route::controller('books', 'BooksController');
+Route::controller('stories', 'StoriesController');
 Route::controller('search', 'SearchController');
 Route::resource('users', 'UsersController');
+Route::resource('books', 'BooksController');

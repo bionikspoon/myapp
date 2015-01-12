@@ -37,7 +37,7 @@ class UsersController extends \BaseController {
 			'email' => Input::get('email'),
 			'password' => Hash::make(Input::get('password'))
 			];
-			$validator = Validator::make($data, User::$rules);
+			$validator = Validator::make(Input::all(), User::$rules);
 
 			if ($validator->fails())
 			{

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>User Registration</title>
-	<?php echo HTML::script('js/jquery-1.7.2.js') ?>
+	<?php echo HTML::script('js/jquery-1.11.2.js') ?>
 </head>
 <body>
 	{{ Form::open(['id' => 'register'])}}

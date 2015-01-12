@@ -35,3 +35,4 @@ Route::get('tab2', function()
 });
 Route::controller('books', 'BooksController');
 Route::controller('search', 'SearchController');
+Route::resource('users', 'UsersController');

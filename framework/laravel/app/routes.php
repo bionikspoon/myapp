@@ -61,14 +61,35 @@ Route::post('signup-submit', function()
 	
 });
 
-Route::get('test', function()
+Route::get('email-form', function()
 {
-	$ch = curl_init();
-	$url = 'https://google.com';
+	return View::make('email-form')->with(['to'=>'bionikspoon@aol.com','from'=>'no-reply@localhost.com','subject'=>'Test','messages'=>'This is a test']);
+});
+Route::post('email-send', function()
+{
+	$input = Input::all();
 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$rules = [
+		'to'		=> 'required|email',
+		'from'		=> 'required|email',
+		'subject'	=> 'required',
+		'messages'	=> 'required',
+	];
+	$validation = Validator::make($input, $rules);
+	if ($validation->fails()) {
+		$return = '';
+		foreach ($validation->errors()->all() as $err) {
+			$return .= "$err <br>";
+		}
+		return $return;
+	}
 
-	$response = curl_exec($ch);
-	curl_close($ch);
-	return dd($response);
+	$return = Mail::send('ajax-email', ['messages' => Input::get('messages')], function($email)
+	{
+		$email
+			->to(Input::get('to'))
+			->replyTo(Input::get('from'))
+			->subject(Input::get('subject'));
+	});
+	return $return;
 });

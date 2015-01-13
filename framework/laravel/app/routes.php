@@ -30,3 +30,29 @@ Route::post('accounts', function()
 	$account->save();
 	return Redirect::to('accounts');
 });
+Route::get('register', function()
+{
+	$users = DB::table('register')->get();
+	return View::make('register')->withUsers($users);
+});
+Route::post('register', function(){
+	$data = [
+		'username' => Input::get('username'),
+		'email' => Hash::make(Input::get('email')),
+		'password' => Hash::make(Input::get('password'))
+	];
+	DB::table('register')->insert($data);
+	return Redirect::to('register');
+});
+Route::post('login', function()
+{
+	$user = DB::table('register')->where('username', '=', Input::get('username'))->first();
+	if (!is_null($user)
+		and Hash::check(Input::get('email'), $user->email) 
+		and Hash::check(Input::get('password'), $user->password)) {
+		echo "Login Successful";
+	} else {
+		echo "not able to login";
+	}
+	
+});

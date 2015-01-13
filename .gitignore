@@ -51,5 +51,6 @@ Temporary Items
 /framework/laravel/.env.*.php
 *.sublime-project
 *.sublime-workspace
-Laravel Application Development Cookbook - Terry Matula.pdf
+/cookbook
+cookbook.*
 .idea/

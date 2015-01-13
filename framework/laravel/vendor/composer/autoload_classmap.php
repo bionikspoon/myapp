@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Book' => $baseDir . '/app/models/Book.php',
+    'Bookprice' => $baseDir . '/app/models/Bookprice.php',
+    'BookpricesController' => $baseDir . '/app/controllers/BookpricesController.php',
     'BooksController' => $baseDir . '/app/controllers/BooksController.php',
     'BooksTableSeeder' => $baseDir . '/app/database/seeds/BooksTableSeeder.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
@@ -31,6 +33,7 @@ return array(
     'ClassPreloader\\Parser\\DirVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/DirVisitor.php',
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
+    'CreateBookpricesTable' => $baseDir . '/app/database/migrations/2015_01_13_053641_create_bookprices_table.php',
     'CreateBooksTable' => $baseDir . '/app/database/migrations/2015_01_12_044737_create_books_table.php',
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2015_01_12_000525_create_users_table.php',
     'Crypt_AES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',

@@ -93,3 +93,4 @@ Route::post('email-send', function()
 	});
 	return $return;
 });
+Route::resource('bookprices', 'BookpricesController');

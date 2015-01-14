@@ -88,8 +88,31 @@ Validator::extend('check_three', function($attribute, $value, $parameter)
 	return count($value) == 3;
 });
 Route::resource('items', 'ItemsController');
-Route::get('empty-cart', function()
+View::composer(['items.index', 'items.show'], function($view)
+{
+	$view->nest('cart', 'cart.index', ['cart_items' => Session::get('cart')]);
+});
+Route::get('cart/add/{id}', ['as' => 'cart.add', function($id)
+{
+	$item = Item::find($id);
+	$cart = Session::get('cart');
+	$cart[uniqid()] = [
+		'id'	=> $item->id,
+		'name'	=> $item->name,
+		'price'	=> $item->price
+	];
+	Session::put('cart', $cart);
+	return Redirect::route('items.index');
+}]);
+Route::get('cart.remove/{key}', ['as' => 'cart.remove', function($key)
+{
+	$cart = Session::get('cart');
+	unset($cart[$key]);
+	Session::put('cart', $cart);
+	return Redirect::route('items.index');
+}]);
+Route::get('cart.empty', ['as' => 'cart.empty', function()
 {
 	Session::forget('cart');
-	return Redirect::to('@items');
-});
+	return Redirect::route('items.index');
+}]);

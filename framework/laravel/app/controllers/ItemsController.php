@@ -14,8 +14,7 @@ class ItemsController extends \BaseController {
 	{
 		$items = Item::all();
 
-		return View::make('items.index', compact('items'))
-			/*->nest('cart', 'cart', ['cart_items' => Session::get('cart')])*/;
+		return View::make('items.index', compact('items'));
 	}
 
 	/**

@@ -64,3 +64,32 @@ Route::post('cross-site', ['before' => 'csrf', function()
 	echo 'Token: ' . Session::token() . '<br>';
 	dd(Input::all());
 }]);
+Route::get('valid', function()
+{
+	return View::make('valid');
+});
+Route::post('valid', function()
+{
+	$rules = [
+		'email'		=> 'required|email',
+		'captain'	=> 'required|check_three'
+	];
+	$messages = [
+		'check_three' => 'Thou shalt choose three captains. No more. No less. Three shalt be the number thou shalt choose, and the number of the choosing shall be three.',
+	];
+	$validation = Validator::make(Input::all(), $rules, $messages);
+	if ($validation->fails()) {
+		return Redirect::to('valid')->withErrors($validation)->withInput();
+	}
+	echo "Form is Valid";
+});
+Validator::extend('check_three', function($attribute, $value, $parameter)
+{
+	return count($value) == 3;
+});
+Route::resource('items', 'ItemsController');
+Route::get('empty-cart', function()
+{
+	Session::forget('cart');
+	return Redirect::to('@items');
+});

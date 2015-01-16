@@ -10,7 +10,8 @@
 	},
 	"require-dev": {
 			"way/generators": "~2.0",
-			"phpunit/phpunit": "4.6.*@dev"
+			"phpunit/phpunit": "4.6.*@dev",
+			"mockery/mockery": "0.9.*@dev"
 		},
 	"autoload": {
 		"classmap": [

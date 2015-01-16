@@ -6,11 +6,13 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"barryvdh/laravel-debugbar": "~1.8"
+		"iron-io/iron_mq": "dev-master",
+		"stripe/stripe-php": "dev-master"
 	},
 	"require-dev": {
-			"way/generators": "~2.0"
-		},
+		"way/generators": "~2.0", 
+		"barryvdh/laravel-debugbar": "~1.8"
+	},
 	"autoload": {
 		"classmap": [
 			"app/commands",

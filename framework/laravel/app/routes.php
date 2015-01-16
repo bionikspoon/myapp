@@ -15,3 +15,42 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('queueships', function()
+{
+    $ships = [
+        [
+            'name' => 'Galactica',
+            'show' => 'Battlestar Galactica'
+        ],
+        [
+            'name' => 'Millennium Falcon',
+            'show' => 'Star Wars'
+        ],
+        [
+            'name' => 'USS Prometheus',
+            'show' => 'Stargate SG-1'
+        ],
+    ];
+    $queue = Queue::push('Spaceship', ['ships' => $ships]);
+
+    return 'Ships are queued';
+});
+Route::get('pay', function()
+{
+    return View::make('pay');
+});
+Route::post('pay', function()
+{
+    Stripe::setApiKey($_ENV['STRIPE_SK']);
+    $chargeCard = [
+        'number'        => Input::get('number'),
+        'exp_month'     => Input::get('exp_month'),
+        'exp_year'      =>  Input::get('exp_year'),
+    ];
+    $charge = Stripe_Charge::create([
+        'card'      => $chargeCard,
+        'amount'    => 3700,
+        'currency'  => 'usd'
+        ]);
+    return dd($charge);
+});

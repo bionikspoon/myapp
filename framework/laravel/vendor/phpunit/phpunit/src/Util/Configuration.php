@@ -19,7 +19,6 @@
  *          backupStaticAttributes="false"
  *          bootstrap="/path/to/bootstrap.php"
  *          cacheTokens="false"
- *          columns="80"
  *          colors="false"
  *          stderr="false"
  *          convertErrorsToExceptions="true"
@@ -544,24 +543,10 @@ class PHPUnit_Util_Configuration
             );
         }
 
-        if ($root->hasAttribute('columns')) {
-            $columns = (string) $root->getAttribute('columns');
-
-            if ($columns == 'max') {
-                $result['columns'] = 'max';
-            } else {
-                $result['columns'] = $this->getInteger($columns, 80);
-            }
-        }
-
         if ($root->hasAttribute('colors')) {
-            /* only allow boolean for compatibility with previous versions
-              'always' only allowed from command line */
-            if ($this->getBoolean($root->getAttribute('colors'), false)) {
-                $result['colors'] = PHPUnit_TextUI_ResultPrinter::COLOR_AUTO;
-            } else {
-                $result['colors'] = PHPUnit_TextUI_ResultPrinter::COLOR_NEVER;
-            }
+            $result['colors'] = $this->getBoolean(
+                (string) $root->getAttribute('colors'), false
+            );
         }
 
         /**

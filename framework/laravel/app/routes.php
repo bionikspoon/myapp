@@ -13,7 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	// return View::make('hello');
+	return 'All The Blueprints';
 });
 Route::get('myapp', function()
 {

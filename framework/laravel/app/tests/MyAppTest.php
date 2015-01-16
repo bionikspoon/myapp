@@ -2,9 +2,7 @@
 class MyAppTest extends TestCase
 {
     
-    function __construct()
-    {
-    }
+
     public function testMyAppRoute()
     {
         $response = $this->call('GET', 'myapp');

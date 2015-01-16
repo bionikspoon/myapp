@@ -5,13 +5,14 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*",
-		"barryvdh/laravel-debugbar": "~1.8"
+		"laravel/framework": "4.2.*"
 	},
 	"require-dev": {
+			"barryvdh/laravel-debugbar": "~1.8",
 			"way/generators": "~2.0",
-			"phpunit/phpunit": "4.6.*@dev",
-			"mockery/mockery": "0.9.*@dev"
+			"phpunit/phpunit": "4.4.*@dev",
+			"mockery/mockery": "0.9.*@dev",
+			"codeception/codeception": "2.1.*@dev"
 		},
 	"autoload": {
 		"classmap": [

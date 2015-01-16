@@ -5,9 +5,6 @@
 class SpaceshipTest extends TestCase
 {
     
-    function __construct()
-    {
-    }
 
     public function testFirstShip()
     {

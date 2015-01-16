@@ -40,9 +40,8 @@ class PHPUnit_TextUI_Command
      * @var array
      */
     protected $longOptions = array(
-      'colors==' => null,
+      'colors' => null,
       'bootstrap=' => null,
-      'columns=' => null,
       'configuration=' => null,
       'coverage-clover=' => null,
       'coverage-crap4j=' => null,
@@ -245,22 +244,13 @@ class PHPUnit_TextUI_Command
         foreach ($this->options[0] as $option) {
             switch ($option[0]) {
                 case '--colors': {
-                    $this->arguments['colors'] = $option[1] ?: PHPUnit_TextUI_ResultPrinter::COLOR_AUTO;
+                    $this->arguments['colors'] = true;
                     }
                 break;
 
                 case '--bootstrap': {
                     $this->arguments['bootstrap'] = $option[1];
                     }
-                break;
-
-                case '--columns': {
-                    if (is_numeric($option[1])) {
-                        $this->arguments['columns'] = (int) $option[1];
-                    } elseif ($option[1] == 'max') {
-                        $this->arguments['columns'] = 'max';
-                    }
-                }
                 break;
 
                 case 'c':
@@ -912,9 +902,7 @@ Test Execution Options:
   --no-globals-backup       Do not backup and restore \$GLOBALS for each test.
   --static-backup           Backup and restore static attributes for each test.
 
-  --colors=<flag>           Use colors in output ("never", "auto" or "always").
-  --columns <n>             Number of columns to use for progress output.
-  --columns max             Use maximum number of columns for progress output.
+  --colors                  Use colors in output.
   --stderr                  Write to STDERR instead of STDOUT.
   --stop-on-error           Stop execution upon first error.
   --stop-on-failure         Stop execution upon first error or failure.

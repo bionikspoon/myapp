@@ -366,7 +366,7 @@ class PHPUnit_Util_Test
             $dataProviderMethodName          = array_pop($leaf);
 
             if (!empty($dataProviderMethodNameNamespace)) {
-                $dataProviderMethodNameNamespace = implode('\\', $dataProviderMethodNameNamespace) . '\\';
+                $dataProviderMethodNameNamespace = join('\\', $dataProviderMethodNameNamespace) . '\\';
             } else {
                 $dataProviderMethodNameNamespace = '';
             }

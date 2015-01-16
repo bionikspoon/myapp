@@ -3,7 +3,7 @@
 PHPUnit is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
 
 [![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/v/stable.png)](https://packagist.org/packages/phpunit/phpunit)
-[![Build Status](https://travis-ci.org/sebastianbergmann/phpunit.svg?branch=master)](https://travis-ci.org/sebastianbergmann/phpunit)
+[![Build Status](https://travis-ci.org/sebastianbergmann/phpunit.png?branch=master)](https://travis-ci.org/sebastianbergmann/phpunit)
 [![Dependency Status](https://www.versioneye.com/php/phpunit:phpunit/dev-master/badge.png)](https://www.versioneye.com/php/phpunit:phpunit/dev-master)
 [![Reference Status](https://www.versioneye.com/php/phpunit:phpunit/reference_badge.svg)](https://www.versioneye.com/php/phpunit:phpunit/references)
 
@@ -36,7 +36,7 @@ Thanks to everyone who has contributed to PHPUnit! You can find a detailed list 
 * [PHP_CodeCoverage](https://github.com/sebastianbergmann/php-code-coverage/graphs/contributors)
 * [PHPUnit_MockObject](https://github.com/sebastianbergmann/phpunit-mock-objects/graphs/contributors)
 
-A very special thanks to everyone who has contributed to the documentation and helps maintain the translations:
+A very special thanks to everyone who has contributed to the documentation and helps maintaining the translations:
 
 * [PHPUnit Documentation](https://github.com/sebastianbergmann/phpunit-documentation/graphs/contributors)
 

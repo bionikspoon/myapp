@@ -139,3 +139,48 @@ Route::get('redis-test', function()
 	$redis->set('name', 'Taylor')	;
 	echo $redis->get('name');
 });
+Route::get('session-one', function()
+{
+	return View::make('session-one');
+});
+Route::post('session-one', function()
+{
+	Session::put('email', Input::get('email'));
+	Session::flash('name', Input::get('name'));
+	$cookie = Cookie::make('city', Input::get('city'), 30);
+	return Redirect::to('session-two')->withCookie($cookie);
+});
+Route::get('session-two', function()
+{
+	$return ='Your email, from a session, is %s. <br>';
+	$return .= 'Your name, from a flash session, is %s. <br>';
+	$return .= 'Your city, from a cookie, is %s. <br>';
+	$return .= '<a href="session-three">Next Page</a>';
+	return sprintf($return, Session::get('email'), Session::get('name'), Cookie::get('city'));
+});
+Route::get('session-three', function()
+{
+	$return = '';
+	if (Session::has('email')) {
+		$return .= sprintf('Your email, from a Session is %s. <br>', Session::get('email'));
+	} else {
+		$return .= 'Email Session is not set.<br>';
+	}
+
+	if (Session::has('name')) {
+		$return .= sprintf('Your name, from a flash session, is %s. <br>', Session::get('name'));
+	} else {
+		$return .= 'Name Session is not set. <br>';
+	}
+
+	if (Cookie::has('city')) {
+		$return .= sprintf('Your city, from a cookie, is %s. <br>', Cookie::get('city'));
+	} else {
+		$return .+ 'City cookie is not set <br>.';
+	}
+
+	Session::forget('email');
+	$return .= '<a href="session-three">Reload</a>';
+
+	return $return;
+});

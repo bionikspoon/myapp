@@ -184,3 +184,78 @@ Route::get('session-three', function()
 
 	return $return;
 });
+Route::get('api-key', function()
+{
+	return View::make('api-key');
+});
+Route::post('api-key', function()
+{
+	$api = new API();
+	$api->name = Input::get('name');
+	$api->api_key = Str::random(16);
+	$api->status = 1;
+	$api->save();
+	return sprintf('Your key is: %s', $api->api_key);
+});
+Route::get('api/{api_key}/shows', function($api_key)
+{
+	$client = Api::where('api_key', '=', $api_key) ->where('status', '=', 1)->first();
+
+	if ($client) {
+		return Show::all();
+	} else {
+		return Response::json('Not Authorized', 401);
+	}
+});
+Route::get('api/{api_key}/shows/{show_id}', function($api_key, $show_id)
+{
+	$client = Api::where('api_key', '=', $api_key)->where('status', '=', 1)->first();
+
+	if ($client) {
+		$show = Show::find($show_id);
+
+		if ($show) {
+			return $show;
+		} else {
+			return Response::json('No Results', 204);
+		}
+		
+	} else {
+		return Response::json('Not Authorized', 401);
+	}
+	
+});
+Route::filter('api', function()
+{
+	if ($api_key = Input::get('api_key')) {
+		$client = Api::where('api_key', '=', $api_key)->where('status', '=', $api_key)->first();
+
+		if(!$client) {
+			return Request::json('Not Authorized', 401);
+		}
+	} else {
+		return Response::json('Not Authorized', 401);
+	}
+});
+Route::post('api/shows', ['before' => 'api', function()
+{
+	return Show::all();
+}]);
+Route::get('post-api', function()
+{
+	$ch = curl_init();
+	curl_setopt_array($ch, [
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_URL => URL::to('api/shows'),
+			CURLOPT_POST => true,
+			CURLOPT_POSTFIELDS => [
+				'api_key' => 'BsfNPhyBoByrNCHF'
+			]
+		]);
+	dd($ch);
+	$resp = curl_exec($ch);
+	curl_close($ch);
+
+	return $resp;
+
+});

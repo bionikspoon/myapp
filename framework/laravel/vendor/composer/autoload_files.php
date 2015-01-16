@@ -13,4 +13,7 @@ return array(
     $vendorDir . '/iron-io/iron_mq/IronMQ.class.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
     $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
+    $vendorDir . '/geoip/geoip/src/geoip.inc',
+    $vendorDir . '/geoip/geoip/src/geoipcity.inc',
+    $vendorDir . '/geoip/geoip/src/timezone.php',
 );

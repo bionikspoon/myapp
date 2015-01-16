@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+    return View::make('hello');
 });
 Route::get('queueships', function()
 {
@@ -53,4 +53,12 @@ Route::post('pay', function()
         'currency'  => 'usd'
         ]);
     return dd($charge);
+});
+Route::get('geo', ['before' => 'geoip:73.9.1.5', function()
+{
+    return;
+}]);
+Route::get('geo/{country_code}', function($country_code)
+{
+    return "Welcome! Your country code is: $country_code";
 });

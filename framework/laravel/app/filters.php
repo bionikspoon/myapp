@@ -85,3 +85,17 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+Route::filter('geoip', function($route, $request, $value = null)
+{
+	$ip = (is_null($value)) ? Request::getClientIp() : $value;
+	$gi = geoip_open(Config::get('geoip.path'), GEOIP_STANDARD);
+	$code = geoip_country_code_by_addr($gi, $ip);
+	geoip_close($gi);
+	if (!$code) {
+		return App::abort(404, 'Country not found');
+	} else {
+		return Redirect::to('geo/' . strtolower($code));
+	}
+});

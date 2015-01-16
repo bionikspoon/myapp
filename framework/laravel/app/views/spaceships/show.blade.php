@@ -1,0 +1,1 @@
+G:\sites\myapp.dev\framework\laravel\app/views/spaceships/show.blade.php

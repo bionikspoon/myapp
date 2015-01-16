@@ -12,7 +12,8 @@
 			"way/generators": "~2.0",
 			"phpunit/phpunit": "4.4.*@dev",
 			"mockery/mockery": "0.9.*@dev",
-			"codeception/codeception": "2.1.*@dev"
+			"codeception/codeception": "2.1.*@dev",
+			"loic-sharma/profiler": "dev-master"
 		},
 	"autoload": {
 		"classmap": [

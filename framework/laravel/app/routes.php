@@ -21,3 +21,4 @@ Route::get('myapp', function()
 	return 'This is my app';
 });
 Route::get('ship', 'ShipsController@showShipName');
+Route::resource('spaceships', 'SpaceshipsController');

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2c849f4ff810fb8a0d8de85286dc615b",
+    "hash": "7e2ea39518e302ffd2cf4ba7971eac50",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2026,6 +2026,47 @@
             "time": "2014-10-12 19:18:40"
         },
         {
+            "name": "loic-sharma/profiler",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loic-sharma/profiler.git",
+                "reference": "956e1e1fdb788ebdfcd9d9765ea56d39043c6a7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loic-sharma/profiler/zipball/956e1e1fdb788ebdfcd9d9765ea56d39043c6a7c",
+                "reference": "956e1e1fdb788ebdfcd9d9765ea56d39043c6a7c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "1.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Profiler": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loic Sharma"
+                }
+            ],
+            "description": "A PHP 5.3 profiler based off of Laravel 3's Anbu.",
+            "keywords": [
+                "anbu",
+                "laravel",
+                "profiler"
+            ],
+            "time": "2014-08-05 01:36:28"
+        },
+        {
             "name": "maximebf/debugbar",
             "version": "v1.10.2",
             "source": {
@@ -3035,7 +3076,8 @@
     "stability-flags": {
         "phpunit/phpunit": 20,
         "mockery/mockery": 20,
-        "codeception/codeception": 20
+        "codeception/codeception": 20,
+        "loic-sharma/profiler": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

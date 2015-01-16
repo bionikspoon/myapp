@@ -11,8 +11,9 @@ class ShipsController extends \BaseController {
 
 	public function showShipName()
 	{
-		$ship = $this->ships->first();
-		return $ship->name;
+		$ships = $this->ships->all();
+		Log::info('Ships loaded' . print_r($ships, true));
+		return View::make('ships')->withShips($ships);
 	}
 
 	/**

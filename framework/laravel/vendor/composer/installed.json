@@ -3129,5 +3129,48 @@
             "testing",
             "xunit"
         ]
+    },
+    {
+        "name": "loic-sharma/profiler",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/loic-sharma/profiler.git",
+            "reference": "956e1e1fdb788ebdfcd9d9765ea56d39043c6a7c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/loic-sharma/profiler/zipball/956e1e1fdb788ebdfcd9d9765ea56d39043c6a7c",
+            "reference": "956e1e1fdb788ebdfcd9d9765ea56d39043c6a7c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/log": "1.0.*"
+        },
+        "time": "2014-08-05 01:36:28",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Profiler": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Loic Sharma"
+            }
+        ],
+        "description": "A PHP 5.3 profiler based off of Laravel 3's Anbu.",
+        "keywords": [
+            "anbu",
+            "laravel",
+            "profiler"
+        ]
     }
 ]

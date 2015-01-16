@@ -116,3 +116,26 @@ Route::get('cart.empty', ['as' => 'cart.empty', function()
 	Session::forget('cart');
 	return Redirect::route('items.index');
 }]);
+Route::get('redis-login', function(){
+	return View::make('redis-login');
+});
+Route::post('redis-login', function()
+{
+	$redis = Redis::connection();
+	$redis->hset('user', 'name', Input::get('name'));
+	$redis->hset('user', 'email', Input::get('email'));
+	return Redirect::to('redis-view');
+});
+Route::get('redis-view', function()
+{
+	$redis = Redis::connection();
+	$name = $redis->hget('user', 'name');
+	$email = $redis->hget('user', 'email');
+	echo "Hello {$name}.  Your email is $email";
+});
+Route::get('redis-test', function()
+{
+	$redis = Redis::connection();
+	$redis->set('name', 'Taylor')	;
+	echo $redis->get('name');
+});

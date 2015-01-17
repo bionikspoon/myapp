@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
+		'Aws\Laravel\AwsServiceProvider',
 	),
 
 	/*
@@ -190,6 +191,8 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 		'Debugbar' 			=> 'Barryvdh\Debugbar\Facade',
+		'AWS' 				=> 'Aws\Laravel\AwsFacade',
+
 
 	),
 

@@ -8,7 +8,8 @@
 		"laravel/framework": "4.2.*",
 		"iron-io/iron_mq": "dev-master",
 		"stripe/stripe-php": "dev-master",
-		"geoip/geoip": "dev-master"
+		"geoip/geoip": "dev-master",
+		"aws/aws-sdk-php-laravel": "dev-master"
 	},
 	"require-dev": {
 		"way/generators": "~2.0", 

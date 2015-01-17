@@ -62,3 +62,33 @@ Route::get('geo/{country_code}', function($country_code)
 {
     return "Welcome! Your country code is: $country_code";
 });
+Route::get('buckets', function()
+{
+    $list = AWS::get('s3')->listBuckets();
+    foreach ($list['Buckets'] as $bucket) {
+        echo $bucket['Name'] . "<br>";
+    }
+});
+Route::get('cloud', function()
+{
+    return View::make('cloud');
+});
+Route::post('cloud', function()
+{
+      $my_image = Input::file('my_image');
+      $s3_name = date('Ymdhis') . '-' . $my_image->getClientOriginalName();
+      $path = $my_image->getRealPath();
+      $s3 = AWS::get('s3');
+      $obj = [
+        'Bucket'        => 'bionikspoon.myapp',
+        'Key'           => $s3_name,
+        'SourceFile'    => $path,
+        'ACL'           => 'public-read'
+      ];
+      if ($s3->putObject($obj)) {
+          return Redirect::to('http://bionikspoon.myapp.s3.amazonaws.com/' . $s3_name );
+      } else {
+          return App::abort(404, 'There was an error');
+      }
+      
+});
